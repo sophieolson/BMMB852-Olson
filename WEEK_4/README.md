@@ -56,6 +56,8 @@ Another gene annotated in this genome is named mfd, with the ID_gene-SAUSA300_RS
 
 The genome of S. aureus subsp. aureus USA300_FPR3757 is very closely packed, with little to no space between the UTR of each gene to the next, and often times without any UTRs between genes. Because of this I would estimate that about 85% of the genome is comprised of coding sequences, with UTRs not included.
 
+<img width="1400" height="486" alt="Screenshot 2025-09-18 234945" src="https://github.com/user-attachments/assets/55ba93df-d077-4505-9383-67a9629cf7ea" />
+
 ## Finding alternative genome builds
 
 GCF_000013425.1 is the accession number for Staphylococcus aureus subsp. aureus USA300_TCH595.
