@@ -13,11 +13,13 @@ I chose to visualize the NF135.c10 strain of Plasmodium falciparum, using the da
 
      seqkit stats PlasmoDB-68_PfalciparumNF135C10_Genome.fasta
 
-The gff file has ten feature types, which are: CDS, exon, mRNA, ncRNA_gene, protein_coding_gene, pseudogene, pseudogenic_transcript, rRNA, snRNA, and tRNA
+The gff file has ten feature types, which are: CDS: 12671, exon: 14069, mRNA: 5028, ncRNA_gene: 125, protein_coding_gene: 5028, pseudogene: 426, pseudogenic_transcript: 426, rRNA: 15, snRNA: 5, and tRNA: 105
 
      wget https://plasmodb.org/common/downloads/release-68/PfalciparumNF135C10/gff/data/PlasmoDB-68_PfalciparumNF135C10.gff
 
      awk '{print $3}' PlasmoDB-68_PfalciparumNF135C10.gff | sort | uniq
+
+     cat PlasmoDB-68_PfalciparumNF135C10.gff | grep -v '#' | cut -f 3 | sort-uniq-count-rank
 
  ## Seperating intervals into different files
 
