@@ -38,7 +38,14 @@ The GFF has 14 features, with the amount of each feature being:
 | 1      | tmRNA            |
 
 
-
+    cd ncbi_dataset
+    ls
+    cd ncbi_dataset
+    ls
+    cd data
+    ls
+    cd GCF_000013465.1/
+    ls
      cat genomic.gff | grep -v '#' | cut -f 3 | sort-uniq-count-rank
 
 The longest gene is ID+gene-SAUSA300_RS07235, called ebh, with a length of 31266nt and its function is to bind to fibronectin, which is importance for adherance in the host. It is also involved in cell wall synthesis. https://journals.asm.org/doi/pdf/10.1128/jb.01366-13
