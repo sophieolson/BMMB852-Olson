@@ -25,9 +25,9 @@ Coverage= sum of sequenced bases / length of genome
 
 Plugging those numbers in for L and G, the current coverage is 1107.8. Therefore to get 10x coverage need 10/1107.8= 1/110.78 sequenced bases.
 
-3182.4 million / 110.78 = 28.7 million sequenced bases
+1.7 million reads / 110.78 = 15454 reads
 
-28.7 million bases are how many I need in my downloaded data to get 10x genome coverage
+28.7 million bases and 15454 reads are how many I need in my downloaded data to get 10x genome coverage
 
 ## Basic stats on dowloaded reads
 
