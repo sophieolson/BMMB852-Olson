@@ -75,6 +75,6 @@ align:
 stats:
 	samtools flagstat ${BAM}
 
-ex:
 # Generate alignment coverage
 	samtools coverage ${BAM}
+
