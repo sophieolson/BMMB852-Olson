@@ -1,12 +1,18 @@
 # Week 6 assignment- Short Read alignments
 
-This homework is based on the Staphylococcus aureus paper. The other file in this folder is a Makefile which contains all code used in this assignemnt.
+This homework is based on the Staphylococcus aureus paper. The other file in this folder is a Makefile which contains all code used in this assignment.
 
 The make file includes code for obtaining the stapyhlococcus genome as well as downloading sequencing reads from SRA.
 
 ## Obtaining the genome
 
-The target genome: contains code needed to downlaod the reference genome using the accession number ACC=NC_007793.1. using seqkit to look at the stats of the genome, this is the out put 
+'''
+
+make genome ACC=NC_007793.1
+
+'''
+
+Contains code needed to downlaod the reference genome using the accession number ACC=NC_007793.1. using seqkit to look at the stats of the genome, this is the out put 
 
 <pre> mkdir -p refs/
 bio fetch NC_007793.1 --format fasta > refs/Staphylococcus_aureus.fa
@@ -16,6 +22,12 @@ refs/Staphylococcus_aureus.fa  FASTA   DNA          1  2,872,769  2,872,769  2,8
 
 
 ## Obtaining sequence data
+
+'''
+
+make fastq SRR=SRR21835896
+
+''' 
 
 Sequences from the paper were obtained using SRR=SRR21835896 and the code listed under fastq:
 
@@ -33,12 +45,24 @@ reads/SRR21835896_2.fastq  FASTQ   DNA    150,000  15,150,000      101      101 
 
 ## Indexing the genome
 
-Target index: contains code to index the genome using bwa.
+'''
+
+make index 
+
+'''
+
+contains code to index the genome using bwa.
 
 
 ## Generating BAM file
 
-Target align: contains code to align the reads to the genome and convert them into a BAM file.
+'''
+
+make align
+
+'''
+
+contains code to align the reads to the genome and convert them into a BAM file.
 
 ## Visualizing BAM files
 
@@ -49,7 +73,13 @@ To then open the genome and BAM files in IGV I clicked on genomes then load geno
 
 ## Generating alignment statistics
 
-Target stats: lists the code needed to view the alignment statistics of the BAM file just made.
+'''
+
+make stats
+
+'''
+
+lists the code needed to view the alignment statistics of the BAM file just made.
 
 <pre> samtools flagstat bam/SRR21835896.bam
 300163 + 0 in total (QC-passed reads + QC-failed reads)
