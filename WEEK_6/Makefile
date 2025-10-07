@@ -78,3 +78,7 @@ stats:
 # Generate alignment coverage
 	samtools coverage ${BAM}
 
+# Run full script
+all: genome fastq index align stats
+
+
